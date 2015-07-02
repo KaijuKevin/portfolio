@@ -16,12 +16,10 @@
 	<% else %>
 		There are no projects. Get to work man.
 	<% end %>
-	<div>
-		<%= link_to "Add a project", new_skill_project_path(@skill) %>
-	</div>
 </div>
 
-<div>
-	<%= link_to "Edit", edit_skill_path(@skill) %>
-	<%= link_to "Delete", skill_path(@skill), data: {confirm: 'Are you sure?'}, method: :delete %>
-</div>
+<ul class="nav nav-pills">
+	<li role="presentation"><%= link_to "Add a project", new_skill_project_path(@skill) %></li>
+	<li role="presentation"><%= link_to "Edit", edit_skill_path(@skill) %></li>
+	<li role="presentation"><%= link_to "Delete", skill_path(@skill), data: {confirm: 'Are you sure?'}, method: :delete %></li>
+</ul>

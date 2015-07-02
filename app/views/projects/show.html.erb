@@ -1,14 +1,12 @@
 <h3><%= @project.name %></h3>
 
-<div>
+<article>
+	<h6><%= link_to "Github", "http://#{@project.link}" %></h6>
 	<p><%= @project.description %></p>
-</div>
+</article>
 
-<div>
-	<%= link_to "Github", "http://#{@project.link}"  %>
-</div>
-
-<div>
-	<%= link_to "Edit", edit_skill_project_path(@skill, @project)  %>
-	<%= link_to "Delete", skill_project_path(@skill, @project), data: { confirm: "Are you sure?" }, method: :delete %>
+<ul class="nav nav-pills">
+	<li role="presentation"><%= link_to "Back", skill_path(@skill) %></li>
+	<li role="presentation"><%= link_to "Edit", edit_skill_project_path(@skill, @project) %></li>
+	<li role="presentation"><%= link_to "Delete", skill_project_path(@skill, @project), data: { confirm: "Are you sure?" }, method: :delete %></li>
 </div>

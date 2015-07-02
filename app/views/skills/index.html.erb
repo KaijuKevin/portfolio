@@ -1,13 +1,38 @@
-<h2>Skills</h2>
+<section class="row profile">
+	<aside class="col-md-4">
+		<%= image_tag("profile.jpg", class: "picture") %>
+	</aside>
+	<article class="col-md-8 description">
+		<h3>About:</h2>
+		<p>
+			My name is Kevin Chen and I am a student of 
+			interactive web-app development at Epicodus. 
+			I have done previous work with basic front end 
+			technologies such as HTML, CSS, and JQuery but 
+			became interested in diving deeper into the 
+			process of developing websites and apps. My goal 
+			is to form a strong foundation of skills so that 
+			I can continue to learn and create on my own. 
+		</p>
+		<p>
+			Currently learning Ruby, Rails, Javascript, Ember.js, 
+			and Postgres.
+		</p>
+	</article>
+</section>
+<section>
+	<h2>Skills</h2>
 
-<% if @skills.any? %>
-	<ul>
-		<% @skills.each do |skill| %>
-			<li><%= link_to skill.name, skill_path(skill) %></li>
-		<% end %>
+	<% if @skills.any? %>
+		<ul>
+			<% @skills.each do |skill| %>
+				<li><%= link_to skill.name, skill_path(skill) %></li>
+			<% end %>
+		</ul>
+	<% else %>
+		<p>This guy has no skillz.</p>
+	<% end %>
+	<ul class="nav nav-pills">
+		<li role="presentation"><%= link_to "Add a new skill", new_skill_path %></li>
 	</ul>
-<% else %>
-	<p>This guy has no skillz.</p>
-<% end %>
-
-<%= link_to "Add a new skill", new_skill_path %>
+</section>
