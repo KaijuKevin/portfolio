@@ -1,0 +1,14 @@
+<h3><%= @project.name %></h3>
+
+<div>
+	<p><%= @project.description %></p>
+</div>
+
+<div>
+	<%= link_to "Github", "http://#{@project.link}"  %>
+</div>
+
+<div>
+	<%= link_to "Edit", edit_skill_project_path(@skill, @project)  %>
+	<%= link_to "Delete", skill_project_path(@skill, @project), data: { confirm: "Are you sure?" }, method: :delete %>
+</div>
