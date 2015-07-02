@@ -19,13 +19,20 @@ navigate to the project directory and run this command:
 $ bundle install
 $ gem install rails
 ```
-You will also have to migrate the database with postgres. 
+You will also have to migrate the database with postgres. If you do not
+already have postgres, download it with Homebrew.
+
+```console
+$ brew install postgres
+$ postgres
+```
+
+In a different terminal tab:
 
 ```console
 $ rake db:create
 $ rake db:migrate
 $ rake db:test:prepare
-
 ```
 
 To run the page, enter this command in your terminal
