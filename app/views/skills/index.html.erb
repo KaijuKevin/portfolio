@@ -1,0 +1,13 @@
+<h2>Skills</h2>
+
+<% if @skills.any? %>
+	<ul>
+		<% @skills.each do |skill| %>
+			<li><%= link_to skill.name, skill_path(skill) %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<p>This guy has no skillz.</p>
+<% end %>
+
+<%= link_to "Add a new skill", new_skill_path %>
