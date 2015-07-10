@@ -11,4 +11,9 @@ FactoryGirl.define do
 		link("todolist.com")
 		skill
 	end
+
+	factory(:post) do
+		title("Meetup summary")
+		body("In today's meetup I learned to use stable technologies in production projects")
+	end
 end

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/addyboo/Projects/portfolio/spec/features/add_project_pages_spec.rb": [
+      "/Users/addyboo/Projects/portfolio/spec/features/add_post_pages_spec.rb": [
         1,
         null,
         1,
@@ -12,13 +12,10 @@
         1,
         1,
         1,
-        1,
         null,
         1,
         null,
         null,
-        1,
-        1,
         1,
         1,
         1,
@@ -267,6 +264,11 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/addyboo/Projects/portfolio/config/routes.rb": [
@@ -285,6 +287,32 @@
       ],
       "/Users/addyboo/Projects/portfolio/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/addyboo/Projects/portfolio/spec/features/add_project_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/addyboo/Projects/portfolio/spec/features/add_skill_pages_spec.rb": [
@@ -309,6 +337,19 @@
         null,
         null
       ],
+      "/Users/addyboo/Projects/portfolio/spec/features/delete_post_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/addyboo/Projects/portfolio/spec/features/delete_project_pages_spec.rb": [
         1,
         null,
@@ -329,6 +370,32 @@
         1,
         1,
         1,
+        1,
+        null,
+        null
+      ],
+      "/Users/addyboo/Projects/portfolio/spec/features/edit_post_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
@@ -387,6 +454,20 @@
         null,
         null
       ],
+      "/Users/addyboo/Projects/portfolio/spec/models/post_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/addyboo/Projects/portfolio/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/addyboo/Projects/portfolio/spec/models/project_spec.rb": [
         1,
         null,
@@ -421,6 +502,68 @@
         1,
         null,
         1,
+        1,
+        null
+      ],
+      "/Users/addyboo/Projects/portfolio/app/controllers/posts_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/Users/addyboo/Projects/portfolio/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
         1,
         null
       ],
@@ -475,13 +618,6 @@
         1,
         4,
         null,
-        null
-      ],
-      "/Users/addyboo/Projects/portfolio/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
         null
       ],
       "/Users/addyboo/Projects/portfolio/app/controllers/projects_controller.rb": [
@@ -541,6 +677,6 @@
         null
       ]
     },
-    "timestamp": 1436547844
+    "timestamp": 1436553045
   }
 }
