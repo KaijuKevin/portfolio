@@ -16,4 +16,8 @@ FactoryGirl.define do
 		title("Meetup summary")
 		body("In today's meetup I learned to use stable technologies in production projects")
 	end
+
+	factory(:user) do
+		
+	end
 end
