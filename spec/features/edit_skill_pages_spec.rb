@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the edit skill process" do 
 	it "will change the name and description" do 
-		skill = Skill.create(name: "Ruby", description: "Programming Language")
+		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_on "Edit"
 		fill_in "Name", with: "Ruby Jewels"
@@ -12,7 +12,7 @@ describe "the edit skill process" do
 	end
 
 	it "will show errors if the form is blank" do
-		skill = Skill.create(name: "Ruby", description: "Programming Language")
+		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_on "Edit"
 		fill_in "Name", with: ""
