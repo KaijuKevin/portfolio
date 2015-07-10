@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   	resources :projects, except: [:index]
   end
 
-  resources :blog do
+  resources :post do
     resources :comments
   end
 end
