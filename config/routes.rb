@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   resources :skills do 
   	resources :projects, except: [:index]
   end
+
+  resources :blog do
+  	resources :comments
+  end
 end
 
