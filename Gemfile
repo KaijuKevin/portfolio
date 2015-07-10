@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancancan'
 
+gem 'rails_12factor', group: :production
+
 group :development do
   gem 'byebug'
   gem 'web-console'
