@@ -18,6 +18,15 @@ FactoryGirl.define do
 	end
 
 	factory(:user) do
-		
+		username("user")
+		email("user@kaijukevin.com")
+		password("123password")
+	end
+
+	factory(:admin, class: User) do
+		username("user")
+		email("user@kaijukevin.com")
+		password("123password")
+		admin(true)
 	end
 end

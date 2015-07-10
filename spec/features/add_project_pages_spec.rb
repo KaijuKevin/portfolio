@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe "the add project process" do 
-	it "will add a project to a skill" do 
+	it "will add a project to a skill" do
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user) 
 		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_link "Add a project"
@@ -14,6 +16,8 @@ describe "the add project process" do
 	end 
 
 	it "will show errors if the form is blank" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_link "Add a project"

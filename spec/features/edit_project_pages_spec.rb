@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the edit project path" do 
 	it "will edit the project" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		project = FactoryGirl.create(:project)
 		visit skill_project_path(project.skill, project)
 		click_link "Edit"
@@ -13,7 +15,9 @@ describe "the edit project path" do
 		expect(page).to have_content "Project successfully updated"
 	end
 
-	it "will show errors if the form is blank" do
+	it "will show errors if the form is blank" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		project = FactoryGirl.create(:project)
 		visit skill_project_path(project.skill, project)
 		click_link "Edit"

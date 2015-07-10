@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 describe "the process of adding a post" do
+	
 	it "will add a post" do
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		visit posts_path
 		click_link "New Post"
 		post = FactoryGirl.create(:post)
@@ -13,6 +16,9 @@ describe "the process of adding a post" do
 	end
 
 	it "will show an error if the form is blank" do
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
+		
 		visit new_post_path
 		click_button "Submit"
 

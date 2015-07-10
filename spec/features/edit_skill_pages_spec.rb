@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the edit skill process" do 
 	it "will change the name and description" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_on "Edit"
@@ -11,7 +13,9 @@ describe "the edit skill process" do
 		expect(page).to have_content("Skill successfully edited")
 	end
 
-	it "will show errors if the form is blank" do
+	it "will show errors if the form is blank" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		skill = FactoryGirl.create(:skill)
 		visit skill_path(skill)
 		click_on "Edit"

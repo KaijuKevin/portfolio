@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the process of editing a post" do 
 	it "will edit a post" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		post = FactoryGirl.create(:post)
 		visit post_path(post)
 		click_link "Edit"
@@ -12,7 +14,9 @@ describe "the process of editing a post" do
 		expect(page).to have_content("Post has been successfully edited")
 	end
 
-	it "will show an error if the form is blank" do
+	it "will show an error if the form is blank" do 
+		admin = FactoryGirl.create(:admin)
+		login_as(admin, scope: :user)
 		post = FactoryGirl.create(:post)
 		visit edit_post_path(post)
 		fill_in "Title", with: ""
