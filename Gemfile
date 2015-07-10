@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'cancancan'
 
 group :development do
   gem 'byebug'

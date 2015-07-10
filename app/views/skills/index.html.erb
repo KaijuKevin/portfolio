@@ -32,7 +32,9 @@
 	<% else %>
 		<p>This guy has no skillz.</p>
 	<% end %>
-	<ul class="nav nav-pills">
-		<li role="presentation"><%= link_to "Add a new skill", new_skill_path %></li>
-	</ul>
+	<% if can? :manage, Skill %>
+		<ul class="nav nav-pills">
+			<li role="presentation"><%= link_to "Add a new skill", new_skill_path %></li>
+		</ul>
+	<% end %>
 </section>
