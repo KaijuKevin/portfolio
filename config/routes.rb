@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :blog do
-  	resources :comments
+    resources :comments
   end
 end
 

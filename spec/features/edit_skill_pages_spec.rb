@@ -10,4 +10,14 @@ describe "the edit skill process" do
 		click_on "Submit"
 		expect(page).to have_content("Skill successfully edited")
 	end
+
+	it "will show errors if the form is blank" do
+		skill = Skill.create(name: "Ruby", description: "Programming Language")
+		visit skill_path(skill)
+		click_on "Edit"
+		fill_in "Name", with: ""
+		fill_in "Description", with: ""
+		click_on "Submit"
+		expect(page).to have_content("Please fix these errors")
+	end
 end
