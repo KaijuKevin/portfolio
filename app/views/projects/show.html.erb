@@ -5,8 +5,13 @@
 	<p><%= @project.description %></p>
 </article>
 
-<ul class="nav nav-pills">
-	<li role="presentation"><%= link_to "Back", skill_path(@skill) %></li>
-	<li role="presentation"><%= link_to "Edit", edit_skill_project_path(@skill, @project) %></li>
-	<li role="presentation"><%= link_to "Delete", skill_project_path(@skill, @project), data: { confirm: "Are you sure?" }, method: :delete %></li>
-</div>
+<% if can? :manage, Project%>
+	<div class="admin">
+		<ul class="nav nav-pills">
+			<li role="presentation"><%= link_to "Back", skill_path(@skill) %></li>
+			<li role="presentation"><%= link_to "Edit", edit_skill_project_path(@skill, @project) %></li>
+			<li role="presentation"><%= link_to "Delete", skill_project_path(@skill, @project), data: { confirm: "Are you sure?" }, method: :delete %></li>
+		</ul>
+	</div>
+<% end %>
+

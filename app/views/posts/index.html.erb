@@ -1,8 +1,13 @@
-<nav>
-	<ul class="nav nav-pills">
-		<li role="presentation"><%= link_to "New Post", new_post_path %></li>
-	</ul>
-</nav>
+
+<% if can? :create, Post %>
+	<div class="admin">
+		<nav>
+			<ul class="nav nav-pills">
+				<li role="presentation"><%= link_to "New Post", new_post_path %></li>
+			</ul>
+		</nav>
+	</div>
+<% end %>
 
 <h1>Recent Posts</h1>
 

@@ -18,8 +18,12 @@
 	<% end %>
 </div>
 
-<ul class="nav nav-pills">
-	<li role="presentation"><%= link_to "Add a project", new_skill_project_path(@skill) %></li>
-	<li role="presentation"><%= link_to "Edit", edit_skill_path(@skill) %></li>
-	<li role="presentation"><%= link_to "Delete", skill_path(@skill), data: {confirm: 'Are you sure?'}, method: :delete %></li>
-</ul>
+<% if can? :manage, Skill, Project %>
+	<div class="admin">
+		<ul class="nav nav-pills">
+			<li role="presentation"><%= link_to "Add a project", new_skill_project_path(@skill) %></li>
+			<li role="presentation"><%= link_to "Edit", edit_skill_path(@skill) %></li>
+			<li role="presentation"><%= link_to "Delete", skill_path(@skill), data: {confirm: 'Are you sure?'}, method: :delete %></li>
+		</ul>
+	</div>
+<% end %>

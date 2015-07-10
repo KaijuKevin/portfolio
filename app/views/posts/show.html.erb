@@ -1,12 +1,14 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
 
-<div class="admin">
-	<h3>Admin panel</h3>
-	<nav>
-		<ul class="nav nav-pills">
-			<li role="presentation"><%= link_to "Edit", edit_post_path(@post) %></li>
-			<li><%= link_to "Delete", post_path(@post), data: { confirm: "Are you sure?" }, method: :delete %></li>
-		</ul>
-	</nav>
-</div>
+<% if can? :mangage, Post%>
+	<div class="admin">
+		<h3>Admin panel</h3>
+		<nav>
+			<ul class="nav nav-pills">
+				<li role="presentation"><%= link_to "Edit", edit_post_path(@post) %></li>
+				<li><%= link_to "Delete", post_path(@post), data: { confirm: "Are you sure?" }, method: :delete %></li>
+			</ul>
+		</nav>
+	</div>
+<% end %>
