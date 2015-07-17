@@ -38,3 +38,21 @@
 		</ul>
 	<% end %>
 </section>
+<section>
+	<h2>Recommendations</h2>
+	<p>If you enjoyed working with me, please leave a recommendation. It would be greatly appreciated :)</p>
+	<div id="recommendation_form_container">
+	</div>
+	<% if user_signed_in? %>
+		<p><%= link_to "Add recommendation", new_recommendation_path, id: "new_recommendation_link", remote: true %><p>
+	<% else %>
+		<p>Please sign in to add a recommendation.</p>
+	<% end %>
+	<% if @recommendations.any? %>
+		<div id="recommendations_list">
+			<%= render "recommendations/list" %>
+		</div>
+	<% else %>
+		<p>I better make some friends...</p>
+	<% end %>
+</section>

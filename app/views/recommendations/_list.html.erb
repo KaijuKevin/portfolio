@@ -1,0 +1,6 @@
+<% @recommendations.each do |recommendation| %>
+	<div>
+		<h6><%= recommendation.user.username %></h6>
+		<p><%= recommendation.description %></p>
+	</div>
+<% end %>

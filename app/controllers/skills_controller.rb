@@ -3,6 +3,7 @@ class SkillsController < ApplicationController
 	
 	def index
 		@skills = Skill.all
+		@recommendations = Recommendation.all
 	end
 
 	def new

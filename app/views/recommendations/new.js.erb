@@ -1,0 +1,9 @@
+$("#new_recommendation_link").hide()
+$("#recommendation_form_container").append("<%= j render 'form' %>")
+$(function() {
+		$("#cancel_recommendation").on("click", function(event) {
+		event.preventDefault();
+		$("#new_recommendation_link").show()
+		$("#recommendation_form_container").remove()
+	})
+})
