@@ -48,11 +48,11 @@
 	<% else %>
 		<p>Please sign in to add a recommendation.</p>
 	<% end %>
-	<% if @recommendations.any? %>
 		<div id="recommendations_list">
+	<% if @recommendations.any? %>
 			<%= render "recommendations/list" %>
-		</div>
 	<% else %>
 		<p>I better make some friends...</p>
 	<% end %>
+		</div>
 </section>
