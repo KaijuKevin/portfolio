@@ -1,0 +1,9 @@
+<% if @comments.any? %>
+		<ul id="comments_list">
+			<% @comments.each do |comment| %>
+				<li><%= comment.body %> - <%= link_to "View more", post_comment_path(@post, comment)  %></li>
+			<% end %>
+		</ul>
+	<% else %>
+		<p>There are no comments</p>
+	<% end %>

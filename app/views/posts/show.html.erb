@@ -3,23 +3,17 @@
 
 <div class="comments">
 	<h3>Comments</h3>
-	<% if @comments.any? %>
-		<ul>
-			<% @comments.each do |comment| %>
-				<li><%= comment.body %> - <%= link_to "View more", post_comment_path(@post, comment)  %></li>
-			<% end %>
-		</ul>
-	<% else %>
-		<p>There are no comments</p>
-	<% end %>
+	<div id="comments_container">
+		<%= render 'comments/list' %>
+	</div>
 
-	<% if user_signed_in? %>
-		<div>
-			<%= render partial: "comments/form" %>
-		</div>
-	<% else %>
-		<p>Please sign in to add a comment.</p>
-	<% end %>
+	<div id="comment_form_container">
+		<% if user_signed_in? %>
+			<%= link_to "New comment", new_post_comment_path(@post, @comment), id: "new_comment_link", remote: true  %>
+		<% else %>
+			<p>Please sign in to add a comment.</p>
+		<% end %>
+	</div>
 </div>
 
 <% if can? :mangage, Post %>
