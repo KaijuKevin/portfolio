@@ -7,6 +7,7 @@ class Ability
       can :manage, :all
     else
       can :manage, Comment
+      can :create, Recommendation
       can :read, :all
     end
     # Define abilities for the passed in user here. For example:

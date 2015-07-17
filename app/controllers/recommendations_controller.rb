@@ -1,4 +1,5 @@
 class RecommendationsController < ApplicationController 
+	load_and_authorize_resource
 	def new
 		@recommendation = Recommendation.new
 		respond_to do |format|
@@ -8,10 +9,11 @@ class RecommendationsController < ApplicationController
 	end
 
 	def create
-		@recommendation = current_user.recommendations.new(recommendation_params)
+		@user = current_user
 		@recommendations = Recommendation.all
+		@recommendation = @user.recommendations.new(recommendation_params)
 		respond_to do |format|
-			if current_user.save
+			if @recommendation.save
 				format.html { redirect_to root_path }
 				format.js
 			else
