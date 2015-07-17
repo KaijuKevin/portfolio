@@ -4,7 +4,11 @@
 <div class="comments">
 	<h3>Comments</h3>
 	<div id="comments_container">
-		<%= render 'comments/list' %>
+		<% if @comments.any? %>
+			<%= render 'comments/list' %>
+		<% else %>
+			<p>There are no comments</p>
+		<% end %>
 	</div>
 
 	<div id="comment_form_container">
