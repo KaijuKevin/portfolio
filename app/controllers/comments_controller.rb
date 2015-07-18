@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.new(comment_params)
 		@comment.user = current_user
-		@comments = current_user.comments
+		@comments = @post.comments
 		respond_to do |format|
 			if @comment.save
 				flash[:notice] = "Comment successfully added"
