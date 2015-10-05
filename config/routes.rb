@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "skills#index"
-  
-  resources :skills do 
+
+  devise_scope :user do
+    get '/admin' => 'devise/sessions#new'
+  end
+
+  root to: 'skills#index'
+
+  resources :skills do
   	resources :projects, except: [:index]
   end
 
@@ -12,4 +17,3 @@ Rails.application.routes.draw do
 
   resources :recommendations
 end
-
