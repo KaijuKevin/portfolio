@@ -4,7 +4,7 @@
 @import 'sprockets-octicons';
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: $sans;
 }
 
 .linkedin {
@@ -52,6 +52,7 @@ body {
   h1 {
     font-size: 3.5em;
     text-align: center;
+    font-weight: bold;
   }
 
   .picture {
@@ -68,6 +69,9 @@ body {
 }
 
 .resume {
+  h1 {
+    font-weight: bold;
+  }
   .entry {
     small {
       margin-top: .3rem;
