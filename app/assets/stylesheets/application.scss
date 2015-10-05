@@ -30,7 +30,7 @@ body {
   margin-top: 1rem;
   padding: 0;
   text-align: center;
-  
+
   li {
     display: inline-block;
     vertical-align: middle;
@@ -65,6 +65,14 @@ body {
 
 .content {
   min-height: 403px;
+}
+
+.resume {
+  .entry {
+    small {
+      margin-top: .3rem;
+    }
+  }
 }
 
 @media (min-width: 970px) {
