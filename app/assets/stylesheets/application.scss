@@ -1,12 +1,41 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'variables';
+@import 'sprockets-octicons';
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+.linkedin {
+  border: 1px solid;
+  border-radius: 3px;
+  display: block;
+  font-family: $myriad-pro;
+  text-align: center;
+  width: 24px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.glyphicon,
+.octicon {
+  font-size: 24px;
+}
+
 .contact {
   list-style-type: none;
+  margin-top: 1rem;
+  padding: 0;
+  text-align: center;
+  
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .5rem;
+  }
 }
 
 .flash {
@@ -19,9 +48,10 @@ body {
 }
 
 .profile {
+
   h1 {
-    text-align: center;
     font-size: 3.5em;
+    text-align: center;
   }
 
   .picture {
@@ -30,5 +60,16 @@ body {
     margin: 0 auto;
     max-height: 250px;
     max-width: 250px;
+  }
+}
+
+.content {
+  min-height: 403px;
+}
+
+@media (min-width: 970px) {
+  .content {
+    border-image: linear-gradient(to right, $grey, $white) 1 100%;
+    border-width: 3px 0 3px 7px;
   }
 }

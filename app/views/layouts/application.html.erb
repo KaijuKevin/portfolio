@@ -26,12 +26,12 @@
       <h1>Kevin Chen</h1>
       <%= image_tag 'profile.jpg', class: 'picture' %>
       <ul class="contact">
-        <li><%= link_to 'Github', 'https://github.com/KaijuKevin' %></li>
-        <li><%= link_to 'LinkedIn', 'https://www.linkedin.com/in/kevinchenpdx' %></li>
-        <li><%= mail_to 'kevc.dev@gmail.com', 'Email' %> </li>
+        <li><%= link_to octicon('mark-github'), 'https://github.com/KaijuKevin' %></li>
+        <li><%= link_to 'in', 'https://www.linkedin.com/in/kevinchenpdx', class: 'linkedin'%></li>
+        <li><%= mail_to 'kevc.dev@gmail.com', glyphicon('envelope') %> </li>
       </ul>
     </aside>
-    <main class="col-md-8">
+    <main class="content col-md-8">
       <nav>
         <ul class="nav nav-pills">
           <li role="presentation"><%= link_to 'Resume', skills_path %></li>
@@ -42,8 +42,5 @@
 		  <%= yield %>
     </main>
 	</div>
-  <footer>
-
-  </footer>
 </body>
 </html>
