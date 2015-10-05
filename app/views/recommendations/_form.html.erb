@@ -1,4 +1,4 @@
-<%= form_for@recommendation, remote: true do |f| %>
+<%= form_for @recommendation, remote: true do |f| %>
 	<div class="form-group">
 		<%= f.label :description %>
 		<%= f.text_area :description, class: "form-control" %>
@@ -6,4 +6,3 @@
 	<%= f.submit "Submit Recommendation", class: "btn btn-primary" %>
 	<%= f.submit "Cancel", id: "cancel_recommendation" %>
 <% end %>
-  

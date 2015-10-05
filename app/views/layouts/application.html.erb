@@ -21,18 +21,29 @@
 			<% end %>
 		</ul>
 	</nav> -->
-	<div class="container">
-    <header class="row name-header">
+	<div class="container row">
+    <aside class="profile col-md-4">
       <h1>Kevin Chen</h1>
-    </header>
-		<%= yield %>
+      <%= image_tag 'profile.jpg', class: 'picture' %>
+      <ul class="contact">
+        <li><%= link_to 'Github', 'https://github.com/KaijuKevin' %></li>
+        <li><%= link_to 'LinkedIn', 'https://www.linkedin.com/in/kevinchenpdx' %></li>
+        <li><%= mail_to 'kevc.dev@gmail.com', 'Email' %> </li>
+      </ul>
+    </aside>
+    <main class="col-md-8">
+      <nav>
+        <ul class="nav nav-pills">
+          <li role="presentation"><%= link_to 'Resume', skills_path %></li>
+          <li role="presentation"><%= link_to 'Projects', '#' %></li>
+          <li role="presentation"><%= link_to 'Blog', posts_path %></li>
+        </ul>
+      </nav>
+		  <%= yield %>
+    </main>
 	</div>
   <footer>
-    <ul class="footer-nav">
-      <li><%= link_to 'Github', 'https://github.com/KaijuKevin' %></li>
-      <li><%= link_to 'LinkedIn', 'https://www.linkedin.com/in/kevinchenpdx' %></li>
-      <li><%= mail_to 'kevc.dev@gmail.com', 'Email' %> </li>
-    </ul>
+
   </footer>
 </body>
 </html>
